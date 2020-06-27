@@ -1,4 +1,4 @@
-package sda.myfirst;
+package sda.other_excercises;
 import java.util.*;
 
 public class LotteryRandom {

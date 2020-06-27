@@ -1,15 +1,14 @@
-package CodingFundamentalsExcercises;
+package fundamentals;
 
-import java.awt.*;
 import java.util.Arrays;
 
 public class ArraysExcercises {
     public static void sumValuesOfArray(int[] input) {
         long output = 0;
-        for (int value : input
-        ) {
+        for (int value : input) {
             output += value;
         }
+
         System.out.print(output);
     }
 
@@ -18,7 +17,7 @@ public class ArraysExcercises {
         for (int value : input) {
             sum += value;
         }
-        float output = sum / (float) input.length;
+        double output = sum / input.length;
         System.out.printf("%.3f", output);
     }
 
@@ -38,11 +37,11 @@ public class ArraysExcercises {
         for (int value : input) {
             if (value > max) {
                 max = value;
-            }
-            if (value < min) {
+            } else if (value < min) {
                 min = value;
             }
         }
+
         System.out.printf("Min=%d, Max=%d", min, max);
     }
 
@@ -57,9 +56,10 @@ public class ArraysExcercises {
 //            System.out.print(val + ", ");
 //        }
         for (int val : output) {
-            System.out.print(val + ", ");
-
+            System.out.print(val + " ");
         }
+        System.out.println();
+        System.out.println(Arrays.toString(output));
     }
 
     public static void numberOfEvenAndOddNumber(int[] input) {
@@ -74,7 +74,7 @@ public class ArraysExcercises {
     }
 
     public static void insertNumAtPosition(int[] arr, int num, int pos) {
-        int[] output = new int[arr.length];
+        int[] output = new int[arr.length + 1];
         System.arraycopy(arr, 0, output, 0, arr.length);
 //                Arrays.copyOf(arr, arr.length + 1);
         if (output.length - 1 - pos >= 0) {
@@ -128,16 +128,16 @@ public class ArraysExcercises {
         for (int i = 0; i < inputArr.length; i++) {
             for (int j = i + 1; j < inputArr.length - 1; j++) {
                 if ((inputArr[i] + inputArr[j]) == sum) {
-                    System.out.printf("%d-%d ", inputArr[i], inputArr[j]);
+                    System.out.printf("[%d-%d] %d-%d ",i, j, inputArr[i], inputArr[j]);
                 }
             }
         }
     }
 
     public static void main(String... args) {
-        int[] input = {1, 7, 3, 10, 9};
+//        int[] input = {1, 7, 3, 10, 9};
 //        int[] input = {10, 127, 13, 310, 13};
-//        int[] input = {5, 7, 11, 23, 31};
+        int[] input = {5, 1, 6, 2, 7, 11, 23, 31};
         System.out.println("\n---------ex1-------sum of an array-------");
         sumValuesOfArray(input);
         System.out.println("\n---------ex2-------average value off array-------");
@@ -154,15 +154,15 @@ public class ArraysExcercises {
         insertNumAtPosition(input, 0, 4);
         System.out.println("\n---------ex8-------find duplicate values-------");
         {
-            int[] input1 = {1, 7, 4, 7, 10, 1, 9};
-            findDuplicateValues(input1);
+            int[] input4 = {1, 7, 4, 7, 10, 1, 9};
+            findDuplicateValues(input4);
         }
         System.out.println("\n---------ex9-------second Largest element_____-------");
         secondLargestElement(input);
         System.out.println("\n---------ex10-------pairs of elements whose sum is equal to spec num-------");
         {
             int[] input1 = {1, 2, 7, 3, 10, 2, 9};
-            pairsOfElementsWhoseSumIs(input1, 8);
+            pairsOfElementsWhoseSumIs(input, 8);
         }
     }
 }

@@ -1,4 +1,4 @@
-package CodingFundamentalsExcercises;
+package fundamentals;
 
 public class DataTypeExcercises {
     public static void print(Object o) {
@@ -31,14 +31,14 @@ public class DataTypeExcercises {
         c = 40.5f;
         d = 4.5f;
         print("computing: " + (((a * b) - (b * b)) / (c - d)));
-        print((25.5 * 3.5 - 3.5 * 3.5) / (40.5 - 4.5));
+        print((25.5 * 3.5 - 3.5 * 3.5) / (40.5 - 4.5)); // checkup
     }
 
     public static void circleAreaPerimeter(double radius) {
         System.out.println("-----ex.5---circle---area---perimeter----");
         double area = Math.PI * radius * radius;
         double perimeter = Math.PI * 2 * radius;
-        print("Circle area is : " + area + "; Perimeter is " + perimeter);
+        print("Circle area is : " + area + "; Perimeter is " + perimeter);  //reiktu su printf sukalti
     }
 
     public static double averageOfInput(double... inputNumbers) {
@@ -88,7 +88,7 @@ public class DataTypeExcercises {
         return;
     }
 
-    public static int sumOfNumDiggits(Integer input) {
+    public static int sumOfNumDigits(Integer input) {
         char[] arr = input.toString().toCharArray();
         int sum = 0;
         for (int digit : arr) {
@@ -96,6 +96,16 @@ public class DataTypeExcercises {
         }
         return sum;
     }
+
+    /**
+    public static int sumOfNumDigits2(Integer input) {
+        char[] arr = input.toString().toCharArray();
+        int sum = 0;
+        for (int digit : arr) {
+            sum += digit - 48; // 0 is 48th symbol in unicode chart; following chars of numbers are in increasing order
+        }
+        return sum;
+    }*/
 
     public static void main(String... args) {
         print("---ex.1----sums--two--given--nums----");
@@ -146,7 +156,7 @@ public class DataTypeExcercises {
         }
         print("---ex.10----integer digits sum---------");
         {
-            print(sumOfNumDiggits(103925));
+            print(sumOfNumDigits(103925));
         }
     }
 }

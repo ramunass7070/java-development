@@ -1,8 +1,4 @@
-package CodingFundamentalsExcercises;
-
-import java.util.Deque;
-import java.util.Scanner;
-import java.util.Collections;
+package fundamentals;
 
 public class LoopsExcercises {
     public static void multiplicationChart(long... input) {
@@ -20,16 +16,16 @@ public class LoopsExcercises {
     public static void evenNumsList() {
         for (int i = 0; i <= 100; i++) {
             if ((i != 0) & (i % 2 == 0)) {
-                System.out.println(i);
+                System.out.print(i + " ");
             }
         }
     }
 
-    public static void integerPrint() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("give me integer:\n");
-        int input = sc.nextInt();
-        for (int i = 0; i < 5; i++) {
+    public static void integerPrint(int input) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("give me integer:\n");
+//        int input = sc.nextInt();
+        for (int i = 0; i < input; i++) {
             for (int j = 0; j <= i; j++) {
                 System.out.print(input);
             }
@@ -62,10 +58,10 @@ public class LoopsExcercises {
     }
 
     public static void powersUnderHundred(int input) {
-        int output = input;
-        for (; output < 100; ) {
+
+        for (int output = input; output < 100; output = output * input) {
             System.out.print(" " + output + ",");
-            output = output * input;
+
         }
     }
 
@@ -85,7 +81,7 @@ public class LoopsExcercises {
         }
     }
 
-    public static void pyramid(int rows) { // absoliuciai nera. kitose uzduotyse yra stringbuilder
+    public static void pyramid(int rows) { // absoliuciai nera StringBuilder
         int num = 1;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < rows - i; j++) {
@@ -101,29 +97,25 @@ public class LoopsExcercises {
 
 
     public static void primeNumbers(int qty) {
-       System.out.printf("First %d prime numbers: %n", qty);
+        System.out.printf("First %d prime numbers: %n", qty);
         int i = 2;
         int j = 0;
-        while ( j < qty){
+        while (j < qty) {
             if (isPrime(i)) {
-         System.out.print(i + ", ");
-         j++;
+                System.out.print(i + ", ");
+                j++;
             }
             i++;
         }
     }
 
     public static boolean isPrime(int num) { // uzstriges buvau ilgai; matematiskai kaip ir suprantu. taciau spr nera labai geras.
-        boolean isPrime = true;                 // randa ka reikia. bet iteruoja ne tik per prime numbers bet kiekviena karta nuo 2 - nera optimalu
         for (int i = 2; i < num; i++) {         // atmetineti reiktu visus kurie dalinasi is prime numbers ! 2 ir yra prime.
             if (num % i == 0) {
-                isPrime = false;
-                break;
-            } else {
-                isPrime = true;
+                return false;
             }
         }
-        return isPrime;
+        return true;
     }
 
     public static void incrementNumbers(int n) {
@@ -146,25 +138,34 @@ public class LoopsExcercises {
     public static void main(String[] args) {
 
         System.out.println("\n-----ex1--multiplication table----");
-//        multiplicationChart(13, 10);
+        multiplicationChart(13, 10);
+
         System.out.println("\n-----ex2--even-numbers-list----");
-//        evenNumsList();
+        evenNumsList();
+
         System.out.println("\n-----ex3--n-nn-nnn-nnnn-nnnnn----");
-//        integerPrint();
+        integerPrint(3);
+
         System.out.println("\n-----ex4--1-100 dividible-by3-by5-by3&5---");
-//        dividedByThreeOrFour(); // could be improved
+        dividedByThreeOrFour(); // could be improved
+
         System.out.println("\n-----ex5--all-powers-of-number-under-100----");
-//        powersUnderHundred(3);
+        powersUnderHundred(3);
+
         System.out.println("\n-----ex6--Fibonaci-series----");
         fibonaciSequence(20);
+
         System.out.println("\n-----ex7--pyramid-of-strings-----");
-//        pyramid(123);    //greitai nesutvarkysiu; reikia zaist su indeksavimais;
+        pyramid(5);
+
         System.out.println("\n-----ex8--first-n-prime-numbers----");
-//        primeNumbers(1000); // esme, kad skaiciuojant 1001 komponente reiktu pradeti iteruoti nuo 1000++; bandziau galva lauzyti, tai ir strigau
+        primeNumbers(1000);
+
         System.out.println("\n-----ex9--first-n-numbers-with-an-n-increment----");
-//        incrementNumbers(5);
+        incrementNumbers(1);
+
         System.out.println("\n-----ex10-factorial-value-of-given-number-----");
-//        factorial(5);
+        factorial(5);
     } //main end brace
 
 } // class closing brace

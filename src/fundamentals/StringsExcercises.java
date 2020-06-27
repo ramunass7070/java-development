@@ -1,4 +1,4 @@
-package CodingFundamentalsExcercises;
+package fundamentals;
 
 
 public class StringsExcercises {
@@ -31,6 +31,15 @@ public class StringsExcercises {
         for (int i = strseq.length - 1; i >= 0; i--) {
             System.out.print(strseq[i]);
         }
+        System.out.println();
+    }
+
+//    ex.4.2 reverse string symbols
+    public static void reverseSymbols2(String str){
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(str);
+        stringBuilder.reverse();
+        System.out.println(stringBuilder);
     }
 
     //ex.5
@@ -75,6 +84,10 @@ public class StringsExcercises {
     //ex.7 gives string length
     public static int getStringLength(String input) {
         return input.length();
+    }
+
+    public static void getStringLength2 (String input) {
+        System.out.printf("%nthe string \"%s\" has %d symbols", input, input.length());
     }
 
     //    ex.8 checks if given strings are lexicographically equal
@@ -157,6 +170,14 @@ public class StringsExcercises {
                 defined, lettersOrDigits, letters, digits, whitespaces, othChars, notDefined);
     }
 
+    /**reiktu analogiskai su regex pasibandyti
+    public static void countSymbolsInString2(String inputString) {
+        int lettersCount = 0;
+        int spacesCount = 0;
+        int numberCount = 0;
+        int othersCount = 0;
+    } */
+
     public static void main(String[] args) {
 //  String ex.1
         hello("Joniukas");
@@ -167,6 +188,8 @@ public class StringsExcercises {
                 "JUMPS OVER THE LAZY DOG");
 //  String ex. 4
         reverseSymbols("Java");
+//  String ex. 4.2
+        reverseSymbols2("Java");
 //  String ex. 5
         System.out.println(firstHalfOfGivenString("Programmer"));
         System.out.println(firstHalfOfGivenString2("Programmer"));
@@ -178,6 +201,7 @@ public class StringsExcercises {
         {
             String input = "This is Java!";
             System.out.printf("The length of given string -- %s -- is: %d", input, getStringLength(input));
+            getStringLength2(input);
         }
 //  String ex. 8 - lexicographical comparison
         System.out.println();
