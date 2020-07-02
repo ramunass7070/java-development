@@ -1,6 +1,6 @@
-package fundamentals_coding;
+package fundamentals_coding.Excercises;
 
-public class Excercises {
+public class ListOfExcercises {
     public static void main(String[] args) {
         ex1(123.123, 12.2222);
         ex2(15, 7);

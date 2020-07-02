@@ -8,7 +8,7 @@ public class TestMobile {
         System.out.println("All mobiles:");
         printMobiles(mobiles);
         System.out.println("\nMost pricey mobile:\t\t");
-        findMostPricy(mobiles).printMobile();
+        Util.findMostPricey(mobiles).printMobile();
         beginsWith(mobiles, "A");
     }
 
@@ -22,16 +22,16 @@ public class TestMobile {
         }
     }
 
-    public static Mobile findMostPricy(Mobile[] mobiles) {
-        Mobile mostPricey = mobiles[0];
-//        double maxPrice = mobiles[0].getPrice();
-        for (Mobile mobile : mobiles) {
-            if (mobile.getPrice() > mostPricey.getPrice()) {
-                mostPricey = mobile;
-            }
-        }
-        return mostPricey;
-    }
+//    public static Mobile findMostPricey(Mobile[] mobiles) {
+//        Mobile mostPricey = mobiles[0];
+////        double maxPrice = mobiles[0].getPrice();
+//        for (Mobile mobile : mobiles) {
+//            if (mobile.getPrice() > mostPricey.getPrice()) {
+//                mostPricey = mobile;
+//            }
+//        }
+//        return mostPricey;
+//    }
 
     private static void printMobiles(Mobile[] mobiles) {
         for (Mobile mobile : mobiles) {
