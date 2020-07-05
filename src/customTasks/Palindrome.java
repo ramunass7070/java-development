@@ -11,4 +11,6 @@ public class Palindrome {
         output.append(input).reverse();
         return output.toString().equals(input);
     }
+
+
 }
