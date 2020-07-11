@@ -1,6 +1,7 @@
 package fundamentals_coding.computer;
 
 import utils.RandomGenerator;
+
 import java.time.LocalDate;
 
 public class ComputerMain {
@@ -22,7 +23,6 @@ public class ComputerMain {
             System.out.printf("%n%s", pc);
         }
 
-
         //print cheapest, print oldest, how many are black(color)
         System.out.printf("%n%nCheapest computer: %s%n" +
                         "%nOldest made: %s Date made: %s%n" +
@@ -31,156 +31,8 @@ public class ComputerMain {
                 ComputerUtils.findOldest(computers), ComputerUtils.findOldest(computers).getMadeYear(),
                 ComputerUtils.countByColor(computers, colorToSearch),
                 colorToSearch);
-
-        //
-//        System.out.println(stringToUpperCase(
-//                "ABS Computer Technologies (Parent: Newegg)\n" +
-//                "Acer\n" +
-//                "Achim\n" +
-//                "AG Neovo\n" +
-//                "Alphabet Inc.\n" +
-//                "Amiga, Inc.\n" +
-//                "ACube Systems Srl\n" +
-//                "Hyperion Entertainment\n" +
-//                "Aigo\n" +
-//                "AMD\n" +
-//                "Aleutia\n" +
-//                "Alienware (Parent: Dell)\n" +
-//                "AMAX Information Technologies\n" +
-//                "AOpen\n" +
-//                "Apple\n" +
-//                "ASRock\n" +
-//                "Asus\n" +
-//                "AVADirect\n" +
-//                "AXIOO International\n" +
-//                "BenQ\n" +
-//                "Biostar\n" +
-//                "Brother Industries\n" +
-//                "Burroughs Corporation\n" +
-//                "Chassis Plans\n" +
-//                "Chip PC\n" +
-//                "Cisco Systems\n" +
-//                "Clevo\n" +
-//                "Cray\n" +
-//                "Crystal Group\n" +
-//                "Compal\n" +
-//                "Compaq\n" +
-//                "Cooler Master\n" +
-//                "CyberPowerPC\n" +
-//                "Dai-Tech\n" +
-//                "Data General\n" +
-//                "Dell\n" +
-//                "Wyse Technology\n" +
-//                "DFI\n" +
-//                "Digital Equipment Corporation\n" +
-//                "Digital Storm\n" +
-//                "DTK\n" +
-//                "Elitegroup Computer Systems (ECS)\n" +
-//                "Epson\n" +
-//                "Evans & Sutherland\n" +
-//                "Everex\n" +
-//                "EVGA\n" +
-//                "Falcon Northwest\n" +
-//                "FIC\n" +
-//                "Fujitsu\n" +
-//                "Foxconn\n" +
-//                "Founder Technology\n" +
-//                "Gigabyte\n" +
-//                "Aorus\n" +
-//                "Google\n" +
-//                "GoPro\n" +
-//                "Gradiente\n" +
-//                "Groupe Bull\n" +
-//                "Grundig (Parent: Arçelik)\n" +
-//                "Hasee\n" +
-//                "HCL\n" +
-//                "Hewlett Packard Enterprise\n" +
-//                "HP Inc. (formerly Hewlett-Packard)\n" +
-//                "Fortify Software\n" +
-//                "HP Autonomy\n" +
-//                "Silicon Graphics International\n" +
-//                "Hitachi\n" +
-//                "HTC\n" +
-//                "Huawei\n" +
-//                "Hyundai\n" +
-//                "IBM\n" +
-//                "Intel\n" +
-//                "Inventec\n" +
-//                "Itautec\n" +
-//                "IGEL\n" +
-//                "Jetta International\n" +
-//                "Kohjinsha\n" +
-//                "Kontron AG\n" +
-//                "Lanix\n" +
-//                "Lanner Electronics\n" +
-//                "LanSlide Gaming PCs\n" +
-//                "Lenovo\n" +
-//                "Medion\n" +
-//                "LG\n" +
-//                "LiteOn\n" +
-//                "Maingear\n" +
-//                "Meebox\n" +
-//                "Mesh Computers\n" +
-//                "Microsoft\n" +
-//                "Micro-Star International (MSI)\n" +
-//                "Micro Center\n" +
-//                "Myria\n" +
-//                "MiTAC\n" +
-//                "Motion Computing\n" +
-//                "Monel\n" +
-//                "Motorola\n" +
-//                "NComputing\n" +
-//                "NCR\n" +
-//                "NEC\n" +
-//                "Nvidia\n" +
-//                "NZXT\n" +
-//                "NeXT\n" +
-//                "Olidata\n" +
-//                "Olivetti\n" +
-//                "Oracle\n" +
-//                "Origin PC\n" +
-//                "Panasonic\n" +
-//                "Positivo Informática\n" +
-//                "Premium PCs\n" +
-//                "Puget Systems\n" +
-//                "Quanta Computer\n" +
-//                "RCA\n" +
-//                "Razer\n" +
-//                "Samsung\n" +
-//                "Sapphire Technology\n" +
-//                "Shuttle\n" +
-//                "SGI\n" +
-//                "Síragon\n" +
-//                "Sony\n" +
-//                "Supermicro\n" +
-//                "Systemax\n" +
-//                "System76\n" +
-//                "T-Platforms\n" +
-//                "TabletKiosk\n" +
-//                "Tadpole Computer\n" +
-//                "Tatung\n" +
-//                "Toshiba\n" +
-//                "Tyan\n" +
-//                "Unisys\n" +
-//                "V3 Gaming PC\n" +
-//                "Vaio\n" +
-//                "Velocity Micro\n" +
-//                "Overdrive PC\n" +
-//                "Vestel\n" +
-//                "VIA Technologies\n" +
-//                "ViewSonic\n" +
-//                "Viglen\n" +
-//                "Vizio\n" +
-//                "Valve\n" +
-//                "Wistron\n" +
-//                "Wortmann\n" +
-//                "Xiaomi\n" +
-//                "Zelybron\n" +
-//                "Zoostorm\n" +
-//                "Zotac\n"));
     }
 
-    //
     public static Computer[] initializeComputer(int size) {
         Computer[] computers = new Computer[size];
 
@@ -227,15 +79,8 @@ public class ComputerMain {
         }
         return computers;
     }
-//
-//        }
-//        return pcs;
-//    public static String stringToUpperCase(String input) {
-//        return input.toUpperCase().replaceAll(" ", "_")
-//                .replaceAll(",","")
-//                .replaceAll("\n",",\n")
-//                .replaceAll(":","");
-//    }
+
+
 }
 
 

@@ -14,7 +14,6 @@ public class ComputerUtils {
         return cheapest;
     }
 
-
     public static Computer findOldest(Computer[] all) {
         Computer oldest = all[0];
         for (Computer computer : all) {
@@ -29,17 +28,17 @@ public class ComputerUtils {
         ArrayList<Computer> matchedObjects = new ArrayList<>();
         for (Computer computer : all) {
             if (computer.getMaker().toString().endsWith(lastLetter)) {
+//            if (computer.getMaker().name().endsWith(lastLetter)) {   // su enum naudoti ne "toString()", o "name()" - duos enumeratoriaus reiksme (spicialiai tam sukurtas metodas)
                 matchedObjects.add(computer);
             }
         }
         return matchedObjects.toArray(new Computer[matchedObjects.size()]);
     }
 
-
     public static int countByColor(Computer[] all, Color color) {
         int count = 0;
         for (Computer pc : all) {
-            if (pc.getColor() == color) {
+            if (pc.getColor().equals(color)) { // cia negalima naudoti == palyginimui, nes lyginame du objektus, o ne primitive reiksmes
                 count++;
             }
         }

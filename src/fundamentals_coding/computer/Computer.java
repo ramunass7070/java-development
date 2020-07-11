@@ -3,10 +3,10 @@ package fundamentals_coding.computer;
 import java.time.LocalDate;
 
 public class Computer {
-    ComputerMaker maker;
-    double price;
-    Color color;
-    LocalDate madeYear;
+    private ComputerMaker maker;
+    private double price;
+    private Color color;
+    private LocalDate madeYear;
 
     public Computer(ComputerMaker maker, Color color, LocalDate madeYear, double price) {
         this.maker = maker;

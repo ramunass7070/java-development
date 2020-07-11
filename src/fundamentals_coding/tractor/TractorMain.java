@@ -4,6 +4,10 @@ import utils.RandomGenerator;
 
 import java.time.LocalDate;
 
+import static fundamentals_coding.tractor.TractorMaker.*;
+import static fundamentals_coding.tractor.Util.*;
+import static utils.RandomGenerator.*;
+
 public class TractorMain {
     public static void main(String[] args) {
 
@@ -18,21 +22,20 @@ public class TractorMain {
         System.out.printf("%nOldest tractor: %s%n" +
                         "%nNewest tractor: %s%n" +
                         "%nMost expensive: %s",
-                Util.findOldest(tractorList).toString(),
-                Util.findNewest(tractorList).toString(),
-                Util.findMostExpensive(tractorList).toString()
+                findOldest(tractorList).toString(),
+                findNewest(tractorList).toString(),
+                findMostExpensive(tractorList).toString()
         );
 
         System.out.printf("%n%nTractors with FUEL TANK SIZE bigger than %d:", tankSize);
-        for (Tractor tracktuor : Util.findTankSizeAtLeast(tankSize, tractorList)) {
+        for (Tractor tracktuor : findTankSizeAtLeast(tankSize, tractorList)) {
             System.out.printf("%n%s", tracktuor.toString());
         }
 
         System.out.printf("%n%nTractors whose maker starts with >>\"%s\"<< :",  startsWith);
-        for (Tractor tracktor : Util.findModelStartsWith(startsWith, tractorList)) {
+        for (Tractor tracktor : findModelStartsWith(startsWith, tractorList)) {
             System.out.printf("%n%s", tracktor.toString());
         }
-
     }
 
     public static Tractor[] initiateTractors(int size) {
@@ -41,7 +44,7 @@ public class TractorMain {
         int tankSize;   // bako dydis
         LocalDate make; //pagaminimo data
         String model;   //modelio pavadinimas
-        TractorMaker[] makers = {TractorMaker.CASE, TractorMaker.CAT, TractorMaker.JCB, TractorMaker.MTZ, TractorMaker.JOHNDEER};
+        TractorMaker[] makers = {CASE, CAT, JCB, MTZ, JOHNDEER};
         TractorMaker maker; // gamintojo pavadinimas;
         //parameters:
             int tankSizeMin = 30;
@@ -49,11 +52,11 @@ public class TractorMain {
             int priceMin = 20000;
             int priceMax = 2000000;
         for (int i = 0; i < size; i++) {
-            model = RandomGenerator.generateRandomName(4, 3);
-            tankSize = RandomGenerator.generateRandomInteger(tankSizeMin, tankSizeMax);
-            price = RandomGenerator.generateRandomDouble(priceMin, priceMax);
-            make = LocalDate.now().minusDays((long) RandomGenerator.generateRandomInteger(0, 32000));
-            maker = makers[RandomGenerator.generateRandomInteger(0, 4)];
+            model = generateRandomName(4, 3);
+            tankSize = generateRandomInteger(tankSizeMin, tankSizeMax);
+            price = generateRandomDouble(priceMin, priceMax);
+            make = LocalDate.now().minusDays((long) generateRandomInteger(0, 32000));
+            maker = makers[generateRandomInteger(0, 4)];
             tractors[i] = new Tractor(maker, model, tankSize, make, price);
         }
         return tractors;
