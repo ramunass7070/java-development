@@ -20,9 +20,11 @@ import java.time.LocalDate;
 import static fundamentals_coding.vehicle.Type.*;
 
 public class VehicleMain {
-    public static void main(String... args) {
 
-        final long expectedYear = 2018;
+    private static final double KMH_TO_MPH_MULTIPLIER = 1.6;
+    private static final long expectedYear = 2018;
+
+    public static void main(String... args) {
 
         Vehicle[] vehicleArr = buildVehicle();
 
