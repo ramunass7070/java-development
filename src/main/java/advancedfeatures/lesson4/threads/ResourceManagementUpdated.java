@@ -14,6 +14,13 @@ public class ResourceManagementUpdated {
 
 
     public static void main(String... args) {
+
+//        void synchronization () { //sinchornizacinis blokas
+//            synchronized (this) {
+//            counter++;
+//            }
+//        }
+
         Thread counterIncrease = new Thread(() -> {
             for (int i = 0; i < 10000; i += 2) {
                 counter++;
