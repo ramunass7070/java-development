@@ -15,7 +15,6 @@ public class CountryCodeMain {
         System.out.println("please select country");
 
         Scanner scanner = new Scanner(System.in);
-
         String countryName = scanner.nextLine();
 
         CountryCode selected = CountryCode.valueOf(countryName.toUpperCase());
@@ -27,6 +26,7 @@ public class CountryCodeMain {
 
         System.out.println("your telephone number is: " + selected.getCode() + telephone);
 
+        System.out.println("pos in enum: " + CountryCode.LITHUANIA.ordinal()); // ordinal() nurodo vertes pozicija enum'e
 
     }
 }
