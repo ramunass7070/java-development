@@ -24,8 +24,8 @@ public class Constructors {
 
     }
 
-    public Constructors(int num2, String othertext, int num3) {
-        this(num2, othertext);
+    public Constructors(int num2, String otherText, int num3) {
+        this(num2, otherText);
         this.num += num3;
     }
 
