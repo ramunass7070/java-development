@@ -1,0 +1,3 @@
+text to write with buffered writer, more text to use more resources
+smth new appended
+path: "./src/main/java/advancedfeatures/lesson4/IO_samples/text.txt"
