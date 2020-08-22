@@ -1,6 +1,6 @@
 package advancedfeatures.lesson3.lambdas;
 
-import java.util.function.Function;
+import java.util.function.Function; // functional interface
 
 public class Functions {
 
